@@ -1,0 +1,10 @@
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}

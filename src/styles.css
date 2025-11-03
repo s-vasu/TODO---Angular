@@ -1,1 +1,161 @@
-/* You can add global styles to this file, and also import other style files */
+/* Design tokens */
+:root {
+  --bg: #0b1020;
+  --surface: #141a2e;
+  --surface-2: #1c2442;
+  --text: #e6e8ef;
+  --muted: #aeb3c2;
+  --primary: #6aa6ff;
+  --primary-600: #4a90ff;
+  --danger: #ff6b6b;
+  --ring: rgba(106, 166, 255, 0.4);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius: 12px;
+}
+
+/* Base layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: linear-gradient(180deg, var(--bg), #0f1530);
+  color: var(--text);
+  margin: 0;
+  padding: 32px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 12px 0;
+  font-weight: 650;
+}
+
+p {
+  margin: 0 0 16px 0;
+  color: var(--muted);
+}
+
+/* Containers */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Form elements */
+input[type='text'] {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f1530;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+input[type='text']::placeholder {
+  color: #7781a6;
+}
+
+input[type='text']:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Buttons */
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.btn {
+  background: #202949;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.btn:hover {
+  background: #24315a;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-600));
+  color: #0a1025;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(74, 144, 255, 0.35);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.btn-danger {
+  background: linear-gradient(180deg, #ff7b7b, var(--danger));
+  color: #220a0a;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.25);
+}
+
+.btn-icon {
+  padding: 8px 10px;
+  line-height: 0;
+}
+
+/* Lists */
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+/* Todo item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #8b92ab;
+}
+  

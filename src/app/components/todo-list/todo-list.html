@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <h2>My Todo List</h2>
+      <button class="btn btn-outline" [routerLink]="['/dashboard']">Back</button>
+    </div>
+
+    <app-add-todo (add)="addNewTodo($event)"></app-add-todo>
+    <br>
+    <div class="list">
+      <div *ngFor="let todo of todos">
+        <app-todo-item
+          [todo]="todo"
+          (toggle)="toggleTodo($event)"
+          (delete)="deleteTodo($event)"
+        ></app-todo-item>
+      </div>
+    </div>
+  </div>
+</div>

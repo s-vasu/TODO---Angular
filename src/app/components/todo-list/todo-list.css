@@ -1,0 +1,8 @@
+.header + app-add-todo {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.list > div {
+  /* each child wrapper around todo-item */
+}

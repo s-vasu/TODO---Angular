@@ -1,0 +1,14 @@
+.add-todo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.add-todo input[type='text'] {
+  padding: 8px 10px; /* smaller height */
+  font-size: 14px;
+}
+
+.add-todo button {
+  padding: 8px 12px; /* align visually with smaller input */
+}
